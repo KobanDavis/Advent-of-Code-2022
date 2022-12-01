@@ -1,0 +1,14 @@
+{
+	"name": "aoc-2022",
+	"version": "1.0.0",
+	"devDependencies": {
+		"@types/node": "latest",
+		"nodemon": "latest",
+		"ts-node": "latest",
+		"typescript": "latest"
+	},
+	"scripts": {
+		"start": "nodemon"
+	},
+	"license": "ISC"
+}
