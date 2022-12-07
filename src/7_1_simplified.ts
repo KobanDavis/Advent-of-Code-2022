@@ -22,11 +22,7 @@ const handleCommand = (command: string) => {
     }
 }
 
-const handleOutput = (output: string) => {
-    const [size] = output.split(' ')
-    if (size === 'dir') return
-    path.forEach((_, i) => nodes[path.slice(0, i + 1).join('_')] += Number(size))
-}
+const handleOutput = (output: string) => path.forEach((_, i) => nodes[path.slice(0, i + 1).join('_')] += Number(output.split(' ')[0]))
 
 input.forEach(handleInput)
 console.log(Object.values(nodes).filter(node => node <= 100000).reduce((total, node) => total + node, 0))
